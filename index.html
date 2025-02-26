@@ -22,11 +22,11 @@
         <h1 class="m-2 text-center">Book your event here!</h1>
     </header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
+        <ul class="carousel-indicators">
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-        </ol>
+        </ul>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-100" src="./img/furbo.jpg" alt="First slide">
@@ -48,53 +48,64 @@
         </a>
     </div>
 
-    <section class="bg-light text-dark p-5 d-flex">
-        <button type="button" class="btn btn-outline-danger btn-lg btn-block w-100">Get your booking here</button>
-    </section>
-
-    <section class="my-5 px-5">
+    <section class="p-5 d-flex bg-light text-danger">
         <h2>Tell us about it!</h2>
-        <form class="border border-secondary shadow-sm rounded-3 mt-4 p-5 text-white">
-            <div class="mb-3">
-                <label for="email" class="form-label">Mail</label>
-                <input type="email" class="form-control rounded-3" id="email" placeholder="yourmail@gmail.com">
-            </div>
 
-            <div class="mb-3">
-                <label for="name" class="form-label">Select why you are contacting us</label>
-                <select class="form-control rounded-3">
-                    <option>Request more information</option>
-                    <option>I want to report an issue</option>
-                    <option>Others</option>
-                </select>
-            </div>
+        <button type="button" class="btn btn-outline-danger my-3 w-100" data-bs-toggle="modal"
+            data-bs-target="#eventModal">
+            Book an Event
+        </button>
 
-            <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea class="form-control rounded-3" id="exampleFormControlTextarea1" rows="3"
-                    placeholder="Something you want to add?"></textarea>
+        <div class="modal" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName"
+                                    placeholder="Enter your first name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName"
+                                    placeholder="Enter your last name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="yourmail@gmail.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventSelect" class="form-label">Select an Event</label>
+                                <select class="form-control" id="eventSelect">
+                                    <option>Concert</option>
+                                    <option>Conference</option>
+                                    <option>Wedding</option>
+                                    <option>Private Party</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dateTime" class="form-label">Select Date & Time</label>
+                                <input type="datetime-local" class="form-control" id="dateTime">
+                            </div>
+                            <button type="submit" class="btn btn-danger w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-
-            <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="check">
-                <label for="check" class="form-check-label">I have read the terms and policy</label>
-            </div>
-
-            <div class="text-start">
-                <button type="submit" class="btn btn-outline-danger btn-md">
-                    <i class="bi bi-send"></i> Submit
-                </button>
-            </div>
-        </form>
+        </div>
     </section>
 
-    <footer class="py-3 my-4 mb-0 bg-danger text-white">
+    <footer class="py-3 my-4 mb-0 bg-dark text-white">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Inicio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Características</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Precios</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Acerca de</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQ</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Abobut</a></li>
         </ul>
         <p class="text-center text-white">© 2024 Company, Inc</p>
     </footer>
